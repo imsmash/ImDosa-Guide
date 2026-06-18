@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ImDosa — Succession Dosa PvP Guide</title>
+<title>ImDosa - Succession Dosa PvP Guide</title>
 <style>
   /* ============================================================
-     THEME — edit colors here
+     THEME - edit colors here
   ============================================================ */
   :root {
     --bg: #1e1f26;
@@ -14,21 +14,8 @@
     --text: #f5f5f5;
     --text-muted: #a0a0a8;
     --border: #35363f;
-    --accent-blue-bg: #1e2a38;
-    --accent-blue-text: #7bb8e8;
-    --accent-blue-border: #2e4a62;
-    --accent-green-bg: #1a2a1e;
-    --accent-green-text: #7ec48a;
-    --accent-green-border: #2a4a30;
-    --accent-red-bg: #2a1e1e;
-    --accent-red-text: #e08080;
-    --accent-red-border: #4a2a2a;
-    --accent-amber-bg: #2e2710;
-    --accent-amber-text: #d4af37;
-    --accent-amber-border: #5a4a18;
     --gold: #d4af37;
     --gold-dim: #a8892a;
-    --radius: 10px;
     --radius-sm: 6px;
     --font: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --mono: "SFMono-Regular", Consolas, monospace;
@@ -48,7 +35,7 @@
   .guide { max-width: 720px; margin: 0 auto; }
 
   /* ============================================================
-     HEADER — edit title/subtitle here
+     HEADER - edit title/subtitle here
   ============================================================ */
   .guide-header { margin-bottom: 1.5rem; display: flex; align-items: flex-start; justify-content: space-between; }
   .guide-header-text h1 { font-size: 24px; font-weight: 600; color: var(--gold); }
@@ -107,7 +94,6 @@
   /* ============================================================
      GEAR LINKS
   ============================================================ */
-  .link-note { font-size: 13px; color: var(--text-muted); margin-bottom: 0.75rem; }
   .link-row {
     display: flex; align-items: center; justify-content: space-between;
     padding: 10px 0; border-bottom: 1px solid var(--border);
@@ -156,7 +142,6 @@
   /* ============================================================
      BADGES
   ============================================================ */
-  /* badges defined in skill-desc section above */
   .badge-sa  { background: #2e2710; color: #d4af37; border: 1px solid #5a4a18; }
   .badge-fg  { background: #0f1f2e; color: #5aaee0; border: 1px solid #1e4a70; }
   .badge-unp { background: #2a1a0a; color: #e07830; border: 1px solid #6a3a10; }
@@ -174,7 +159,7 @@
   .combo-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; color: var(--gold); }
   .combo-context { font-size: 13px; color: var(--text-muted); margin-bottom: 0.75rem; }
   .combo-sequence {
-    display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
+    display: flex; align-items: flex-start; flex-wrap: wrap; gap: 16px;
     margin-bottom: 0.75rem; padding: 0.75rem;
     background: var(--bg-secondary); border-radius: var(--radius-sm);
   }
@@ -183,23 +168,23 @@
     background: var(--bg); border: 1px solid var(--gold-dim);
     border-radius: var(--radius-sm); padding: 4px 10px; color: var(--gold);
   }
-  .combo-arrow { color: var(--text-muted); font-size: 12px; }
   .combo-note { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+  .combo-step { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .combo-annotation { font-size: 10px; color: var(--text-muted); white-space: nowrap; min-height: 14px; }
+  .filler-key { border-color: var(--gold-dim); color: var(--gold); }
+  .combo-steps-breakdown { margin-top: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .combo-step-row { display: flex; align-items: flex-start; gap: 10px; }
+  .step-label { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: var(--radius-sm); flex-shrink: 0; width: 70px; text-align: center; margin-top: 1px; }
+  .step-label.teleport { background: #1f1a2e; color: #b08ee0; border: 1px solid #4a3570; }
+  .step-label.damage { background: #2e2710; color: #d4af37; border: 1px solid #5a4a18; }
+  .step-label.recc { background: #2a1010; color: #e05555; border: 1px solid #6a2020; }
+  .step-label.filler { background: #1a2a1e; color: #7ec48a; border: 1px solid #2a4a30; }
+  .step-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; flex: 1; }
+  .skill-ref { color: var(--gold); font-weight: 600; font-family: var(--mono); font-size: 12px; }
+  .prot-sa { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: var(--radius-sm); background: #2e2710; color: #d4af37; border: 1px solid #5a4a18; }
+  .prot-if { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: var(--radius-sm); background: #2a1010; color: #e05555; border: 1px solid #6a2020; }
 
-  /* ============================================================
-     FINISHERS
-  ============================================================ */
-  .finisher-row {
-    display: flex; gap: 10px; align-items: flex-start;
-    padding: 6px 0; border-bottom: 1px solid var(--border);
-  }
-  .finisher-row:last-child { border-bottom: none; }
-  .finisher-key { font-family: var(--mono); font-size: 12px; font-weight: 600; min-width: 120px; }
-  .finisher-desc { font-size: 13px; color: var(--text-muted); }
 
-  /* ============================================================
-     MOVEMENT NOTE
-  ============================================================ */
   .move-note {
     font-size: 13px; color: var(--text-muted); line-height: 1.6;
     margin-top: 0.75rem; padding: 0.75rem;
@@ -222,9 +207,9 @@
 
   <div class="guide-header">
     <div class="guide-header-text">
-      <h1>ImDosa — Succession Dosa PvP Guide</h1>
+      <h1>ImDosa - Succession Dosa PvP Guide</h1>
       <p style="font-size:12px;color:var(--gold-dim);margin-top:2px">by ImSmash</p>
-      <p style="font-size:11px;color:var(--text-muted);margin-top:2px">Last revised: May 5, 2026</p>
+      <p style="font-size:11px;color:var(--text-muted);margin-top:2px">Last revised: June 18, 2026</p>
       <p>Node War / Siege focused. Kept short on purpose.</p>
     </div>
     <a class="twitch-link" href="https://www.twitch.tv/imsmash" target="_blank">
@@ -236,7 +221,7 @@
   </div>
 
   <!-- ============================================================
-       TABS — add/remove tabs here (match id to section below)
+       TABS - add/remove tabs here (match id to section below)
   ============================================================ -->
   <div class="tabs">
     <button class="tab active" onclick="showTab('gear',this)">Gear &amp; Setup</button>
@@ -246,17 +231,15 @@
     <button class="tab" onclick="showTab('faq',this)">FAQ</button>
   </div>
 
-  <div style="font-size:12px;color:var(--text-muted);line-height:1.6;padding:0.6rem 0.85rem;background:var(--bg-secondary);border-radius:var(--border-radius-md);margin-bottom:1rem;border-left:3px solid var(--gold-dim);">
-    ⚠️ This guide is still a <strong style="color:var(--text)">work in progress</strong>. If you spot any mistakes, typos, or anything that needs fixing, please reach out via Discord <strong style="color:var(--text)">@imsmash</strong> or let me know when I'm live on Twitch.
-  </div>
-
   <!-- ============================================================
        GEAR & SETUP TAB
        Edit the href links and labels below
   ============================================================ -->
   <div id="gear" class="section active">
+    <div style="font-size:12px;color:var(--text-muted);line-height:1.6;padding:0.6rem 0.85rem;background:var(--bg-secondary);border-radius:var(--border-radius-md);margin-bottom:1rem;border-left:3px solid var(--gold-dim);">
+      ⚠️ This guide is still a <strong style="color:var(--text)">work in progress</strong>. If you spot any mistakes, typos, or anything that needs fixing, please reach out via Discord <strong style="color:var(--text)">@imsmash</strong> or let me know when I'm live on Twitch.
+    </div>
     <div class="card">
-      <div class="link-note">I keep these pages up to date — check them directly for the latest.</div>
       <div class="link-row">
         <div class="link-label">Gear<span>Full character build</span></div>
         <a class="link-btn" href="https://garmoth.com/character/ImSmash" target="_blank">View on Garmoth →</a>
@@ -273,7 +256,7 @@
   </div>
 
   <!-- ============================================================
-       SKILLS TAB — rendered by JS below
+       SKILLS TAB - rendered by JS below
   ============================================================ -->
   <div id="skills" class="section">
     <div class="card" id="skill-card"></div>
@@ -285,32 +268,67 @@
   <div id="combos" class="section">
     <div class="combo-card">
       <div class="combo-title">Bread and Butter</div>
-      <div class="combo-context">Use when crashing into an enemy blob with your team. Quick SA damage, then leave immediately — do not commit.</div>
+      <div class="combo-context">Use when crashing into an enemy blob with your team. Quick SA damage, then leave immediately - do not commit.</div>
       <div class="combo-sequence">
-        <span class="combo-key">C</span><span class="combo-arrow">›</span>
-        <span class="combo-key">RMB</span><span class="combo-arrow">›</span>
-        <span class="combo-key">Shift RMB</span><span class="combo-arrow">›</span>
-        <span class="combo-key">Shift Q</span><span class="combo-arrow">›</span>
-        <span class="combo-key">Shift C</span>
+        <div class="combo-step"><span class="combo-key">C</span><span class="combo-annotation">SA</span></div>
+        <div class="combo-step"><span class="combo-key">RMB</span><span class="combo-annotation">iFrame → SA · KD</span></div>
+        <div class="combo-step"><span class="combo-key">Shift Q</span><span class="combo-annotation">SA · Damage</span></div>
+        <div class="combo-step"><span class="combo-key">Shift C</span><span class="combo-annotation">SA · Damage</span></div>
+        <div class="combo-step"><span class="combo-key">Shift RMB</span><span class="combo-annotation">SA · Re-CC</span></div>
+        <div class="combo-step"><span class="combo-key filler-key">Filler</span><span class="combo-annotation">Situational</span></div>
       </div>
-      <div class="combo-note">C teleports you into the ball via RMB. Shift RMB re-CCs, then Shift Q + Shift C is your main damage window under SA. Exit immediately after. If Shift Q or Shift C are on cooldown, damage drops significantly — supplement with filler skills.</div>
+      <div class="combo-steps-breakdown">
+        <div class="combo-step-row">
+          <span class="step-label teleport">Teleport</span>
+          <span class="step-desc"><span class="skill-ref">C → RMB</span> teleports you into the enemy ball - <span class="prot-sa">SA</span> → <span class="prot-if">iFrame</span> → <span class="prot-sa">SA</span>, ending with a Knockdown.</span>
+        </div>
+        <div class="combo-step-row">
+          <span class="step-label damage">Damage</span>
+          <span class="step-desc"><span class="skill-ref">Shift Q</span> and <span class="skill-ref">Shift C</span> are your strongest skills.</span>
+        </div>
+        <div class="combo-step-row">
+          <span class="step-label recc">Re-CC</span>
+          <span class="step-desc"><span class="skill-ref">Shift RMB</span> re-CCs anyone still caught from the Knockdown, or catches anyone nearby who isn't protected. Also deals decent damage.</span>
+        </div>
+        <div class="combo-step-row">
+          <span class="step-label filler">Filler</span>
+          <span class="step-desc">Use what you feel is necessary.</span>
+        </div>
+      </div>
     </div>
     <div class="combo-card">
       <div class="combo-title">Kill combo</div>
-      <div class="combo-context">Use on isolated targets — stragglers, rangers posted up, anyone caught out of position. Expect a kill. This is a commit.</div>
+      <div class="combo-context">Use on isolated targets - stragglers, rangers posted up, anyone caught out of position. Expect a kill. This is a commit.</div>
       <div class="combo-sequence">
-        <span class="combo-key">C</span><span class="combo-arrow">›</span>
-        <span class="combo-key">RMB</span><span class="combo-arrow">›</span>
-        <span class="combo-key">F F</span><span class="combo-arrow">›</span>
-        <span class="combo-key">Shift RMB</span><span class="combo-arrow">›</span>
-        <span class="combo-key">Shift Q</span><span class="combo-arrow">›</span>
-        <span class="combo-key">Shift C</span>
+        <div class="combo-step"><span class="combo-key">C</span><span class="combo-annotation">SA</span></div>
+        <div class="combo-step"><span class="combo-key">RMB</span><span class="combo-annotation">iFrame → SA · KD</span></div>
+        <div class="combo-step"><span class="combo-key">F F</span><span class="combo-annotation">SA · -DP</span></div>
+        <div class="combo-step"><span class="combo-key">Shift RMB</span><span class="combo-annotation">SA · Re-CC</span></div>
+        <div class="combo-step"><span class="combo-key">Shift Q</span><span class="combo-annotation">SA · Damage</span></div>
+        <div class="combo-step"><span class="combo-key">Shift C</span><span class="combo-annotation">SA · Damage</span></div>
+        <div class="combo-step"><span class="combo-key filler-key">Finisher</span><span class="combo-annotation">Situational</span></div>
       </div>
-      <div class="combo-note">RMB knocks down. F F applies double -DP debuff. Shift RMB re-CCs with another KD. Then Shift Q + Shift C into their soft CC window. Read what's left and pick a finisher:</div>
-      <div style="margin-top:0.75rem">
-        <div class="finisher-row"><div class="finisher-key">Shift F</div><div class="finisher-desc">They're low and you need to back off safely. FG lets you disengage.</div></div>
-        <div class="finisher-row"><div class="finisher-key">LMB › Spacebar</div><div class="finisher-desc">More damage, faster. You're exposed on LMB so be aware of pressure.</div></div>
-        <div class="finisher-row"><div class="finisher-key">F F › Spacebar</div><div class="finisher-desc">Most damage. SA protected throughout but slower. Use when you have time.</div></div>
+      <div class="combo-steps-breakdown">
+        <div class="combo-step-row">
+          <span class="step-label teleport">Teleport</span>
+          <span class="step-desc"><span class="skill-ref">C → RMB</span> teleports you to the target - <span class="prot-sa">SA</span> → <span class="prot-if">iFrame</span> → <span class="prot-sa">SA</span>, ending with a Knockdown.</span>
+        </div>
+        <div class="combo-step-row">
+          <span class="step-label" style="background:#1a1a2e;color:#6a8ee0;border:1px solid #2a3a70;width:70px;text-align:center">DP Shred</span>
+          <span class="step-desc"><span class="skill-ref">F F</span> keeps you in SA, repositions slightly, applies double -DP debuff and deals damage. If F F feels too slow, you can substitute it with <span class="skill-ref">Space Bar</span> - you sacrifice a bit of damage for a faster skill.</span>
+        </div>
+        <div class="combo-step-row">
+          <span class="step-label recc">Re-CC</span>
+          <span class="step-desc"><span class="skill-ref">Shift RMB</span> re-CCs the target while they're down.</span>
+        </div>
+        <div class="combo-step-row">
+          <span class="step-label damage">Damage</span>
+          <span class="step-desc"><span class="skill-ref">Shift Q</span> and <span class="skill-ref">Shift C</span> are your strongest skills.</span>
+        </div>
+        <div class="combo-step-row">
+          <span class="step-label filler">Finisher</span>
+          <span class="step-desc">Use what you feel is necessary.</span>
+        </div>
       </div>
     </div>
   </div>
@@ -326,22 +344,22 @@
     <div class="card">
       <div class="faq-item">
         <div class="faq-q">How do you teleport so far?</div>
-        <div class="faq-a">It's C (Cloud General) into RMB (Virga Shaft). Cloud General semi-randomly picks a target and will try to knock them back — there are some weird mechanics about it I won't get into. But there's a specific interaction where after using Cloud General, your Virga Shaft distance is greatly increased. If you do it correctly it can teleport you a massive distance, and yes — even vertically up terrain. There is a max distance and the terrain plays a huge role in how far you can go. Best advice I can offer is getting a friend and testing out how far you can go on different levels of terrain to get a feel for it yourself.</div>
+        <div class="faq-a">It's C (Cloud General) into RMB (Virga Shaft). Cloud General semi-randomly picks a target and will try to knock them back - there are some weird mechanics about it I won't get into. But there's a specific interaction where after using Cloud General, your Virga Shaft distance is greatly increased. If you do it correctly it can teleport you a massive distance, and yes - even vertically up terrain. There is a max distance and the terrain plays a huge role in how far you can go. Best advice I can offer is getting a friend and testing out how far you can go on different levels of terrain to get a feel for it yourself.</div>
       </div>
       <div class="divider"></div>
       <div class="faq-item">
         <div class="faq-q">How do you manage your stamina?</div>
-        <div class="faq-a">S F (Cloud Shield) costs zero stamina — use it constantly. Weave in F F and Spacebar between movements: F F regens stamina while keeping you in SA on a low cooldown, and Spacebar doesn't use stamina but helps you keep moving forward. Avoid spamming LMB (Velum Slash) just to move — drains stamina fast and goes unprotected on cooldown.</div>
+        <div class="faq-a">S F (Cloud Shield) costs zero stamina - use it constantly. Weave in F F and Spacebar between movements: F F regens stamina while keeping you in SA on a low cooldown, and Spacebar doesn't use stamina but helps you keep moving forward. Avoid spamming LMB (Velum Slash) just to move - drains stamina fast and goes unprotected on cooldown.</div>
       </div>
       <div class="divider"></div>
       <div class="faq-item">
         <div class="faq-q">I keep getting CC'd out of S F (Cloud Shield), help!</div>
-        <div class="faq-a">It's best to use S F after you use some other skill to break the distance or grant yourself some protection. For example, using A/D RMB (Flow: Cloud Drift), Shift A/D (Stratus Shift), or Shift Z (Moonlit Haze) before S F can help reduce the risk of getting hit accelerated out of S F and the move ending early. However, frame drops can still happen and cause it. Note this isn't a 100% guarantee it won't happen — it's just to mitigate it.</div>
+        <div class="faq-a">It's best to use S F after you use some other skill to break the distance or grant yourself some protection. For example, using A/D RMB (Flow: Cloud Drift), Shift A/D (Stratus Shift), or Shift Z (Moonlit Haze) before S F can help reduce the risk of getting hit accelerated out of S F and the move ending early. However, frame drops can still happen and cause it. Note this isn't a 100% guarantee it won't happen - it's just to mitigate it.</div>
       </div>
       <div class="divider"></div>
       <div class="faq-item">
         <div class="faq-q">What does Q (Prime: Wind Shear) do?</div>
-        <div class="faq-a">Prime: Wind Shear is enhanced by the skill enhancement Loop: Wind Shear. When you successfully block a skill with it, you heal 1000HP and enter SA with a 99% DR bonus. At the same time it knocks back nearby enemies — you can immediately follow up with RMB (Virga Shaft) to knock down any knocked back targets. The AoE on the knockback is pretty large so it can catch multiple people.</div>
+        <div class="faq-a">Prime: Wind Shear is enhanced by the skill enhancement Loop: Wind Shear. When you successfully block a skill with it, you heal 1000HP and enter SA with a 99% DR bonus. At the same time it knocks back nearby enemies - you can immediately follow up with RMB (Virga Shaft) to knock down any knocked back targets. The AoE on the knockback is pretty large so it can catch multiple people.</div>
         <div class="faq-a" style="margin-top:0.6rem">The other thing worth knowing is that Q acts as a cancel for almost any animation. Mid-cast into Shift E? Press Q to cancel it. Stuck in the F F animation? Press Q to get out. It's one of the most useful tools on the kit for staying fluid and not getting caught in a bad animation.</div>
       </div>
     </div>
@@ -354,40 +372,40 @@
 
 <script>
 // ============================================================
-// ICONS — base64 encoded skill icons
-// To replace an icon: swap out the data URI for a new one
+// ICONS - skill icon file paths
+// To replace an icon: update the filename
 // ============================================================
 const ICONS = {
-  "Prime_Taeguk_IV": "icons/Prime_Taeguk_IV.webp",
-  "Prime_Four_Seasons": "icons/Prime_Four_Seasons.webp",
-  "Prime_Flow_Blinding_Slash": "icons/Prime_Flow_Blinding_Slash.webp",
-  "Flow_Oblique_Cleave": "icons/Flow_Oblique_Cleave.webp",
-  "Prime_Winter_Squall_IV": "icons/Prime_Winter_Squall_IV.webp",
-  "Prime_Spring_Frost": "icons/Prime_Spring_Frost.webp",
-  "Prime_Flow_Twin_Slash_III": "icons/Prime_Flow_Twin_Slash_III.webp",
-  "Chain_Final_Slash": "icons/Chain_Final_Slash.webp",
-  "Flow_Virga_Shaft": "icons/Flow_Virga_Shaft.webp",
-  "Prime_Summer_Breeze_IV": "icons/Prime_Summer_Breeze_IV.webp",
-  "Prime_Autumnal_Blitz": "icons/Prime_Autumnal_Blitz.webp",
-  "Absolute_Fogbloom": "icons/Absolute_Fogbloom.webp",
-  "Prime_Cloudveil": "icons/Prime_Cloudveil.webp",
-  "Absolute_Downpour": "icons/Absolute_Downpour.webp",
-  "Flow_Fog_Scatter": "icons/Flow_Fog_Scatter.webp",
-  "Dual_Slash": "icons/Dual_Slash.webp",
-  "Moonlit_Haze": "icons/Moonlit_Haze.webp",
-  "Loop_Wind_Shear": "icons/Loop_Wind_Shear.webp",
-  "Prime_Cloudspire": "icons/Prime_Cloudspire.webp",
-  "Cloud_Step": "icons/Cloud_Step.webp",
-  "Prime_Cloud_General": "icons/Prime_Cloud_General.webp",
-  "Absolute_Cloud_Shield": "icons/Absolute_Cloud_Shield.webp",
-  "Absolute_Deep_Haze": "icons/Absolute_Deep_Haze.webp",
-  "Flow_Cloud_Drift": "icons/Flow_Cloud_Drift.webp",
-  "Stratus_Shift": "icons/Stratus_Shift.webp",
-  "Flow_Velum_Slash": "icons/Flow_Velum_Slash.webp",
+  "Prime_Taeguk_IV": "Prime_Taeguk_IV.webp",
+  "Prime_Four_Seasons": "Prime_Four_Seasons.webp",
+  "Prime_Flow_Blinding_Slash": "Prime_Flow_Blinding_Slash.webp",
+  "Flow_Oblique_Cleave": "Flow_Oblique_Cleave.webp",
+  "Prime_Winter_Squall_IV": "Prime_Winter_Squall_IV.webp",
+  "Prime_Spring_Frost": "Prime_Spring_Frost.webp",
+  "Prime_Flow_Twin_Slash_III": "Prime_Flow_Twin_Slash_III.webp",
+  "Chain_Final_Slash": "Chain_Final_Slash.webp",
+  "Flow_Virga_Shaft": "Flow_Virga_Shaft.webp",
+  "Prime_Summer_Breeze_IV": "Prime_Summer_Breeze_IV.webp",
+  "Prime_Autumnal_Blitz": "Prime_Autumnal_Blitz.webp",
+  "Absolute_Fogbloom": "Absolute_Fogbloom.webp",
+  "Prime_Cloudveil": "Prime_Cloudveil.webp",
+  "Absolute_Downpour": "Absolute_Downpour.webp",
+  "Flow_Fog_Scatter": "Flow_Fog_Scatter.webp",
+  "Dual_Slash": "Dual_Slash.webp",
+  "Moonlit_Haze": "Moonlit_Haze.webp",
+  "Loop_Wind_Shear": "Loop_Wind_Shear.webp",
+  "Prime_Cloudspire": "Prime_Cloudspire.webp",
+  "Cloud_Step": "Cloud_Step.webp",
+  "Prime_Cloud_General": "Prime_Cloud_General.webp",
+  "Absolute_Cloud_Shield": "Absolute_Cloud_Shield.webp",
+  "Absolute_Deep_Haze": "Absolute_Deep_Haze.webp",
+  "Flow_Cloud_Drift": "Flow_Cloud_Drift.webp",
+  "Stratus_Shift": "Stratus_Shift.webp",
+  "Flow_Velum_Slash": "Flow_Velum_Slash.webp",
 };
 
 // ============================================================
-// HELPER FUNCTIONS — no need to edit these
+// HELPER FUNCTIONS - no need to edit these
 // ============================================================
 function img(key) {
   if (ICONS[key]) return `<img class="skill-icon" src="${ICONS[key]}" alt="${key}" onerror="this.style.display='none'">`;
@@ -420,7 +438,7 @@ document.getElementById('skill-card').innerHTML = `
 <div class="skill-group">
   <div class="skill-group-title">DP Shred</div>
   ${row('Prime_Flow_Blinding_Slash','F F','Prime: Flow: Blinding Slash',SA,'Low cooldown. Use before dumping main damage. Applies double -DP debuff if you have the -DP add-ons on Flow: Blinding Slash.')}
-  ${row('Flow_Oblique_Cleave','Space Bar','Flow: Oblique Cleave',SA,'Low cooldown. Also a movement/stamina regen tool — see Movement tab. Has a chance to downsmash. Applies -DP debuff if you have the -DP add-on on Fog Cleave.')}
+  ${row('Flow_Oblique_Cleave','Space Bar','Flow: Oblique Cleave',SA,'Low cooldown. Also a movement/stamina regen tool - see Movement tab. Has a chance to downsmash. Applies -DP debuff if you have the -DP add-on on Fog Cleave.')}
 </div>
 <div class="skill-group">
   <div class="skill-group-title">Filler Damage</div>
@@ -431,7 +449,7 @@ document.getElementById('skill-card').innerHTML = `
 </div>
 <div class="skill-group">
   <div class="skill-group-title">Re-CC</div>
-  ${row('Flow_Virga_Shaft','RMB (after skills)','Flow: Virga Shaft',IF,'Chains after certain skills. Also the teleport mechanic — see FAQ.')}
+  ${row('Flow_Virga_Shaft','RMB (after skills)','Flow: Virga Shaft',IF,'Chains after certain skills. Also the teleport mechanic - see FAQ.')}
   ${row('Prime_Summer_Breeze_IV','Shift RMB','Prime: Summer Breeze IV',SA,'KD. Main re-CC after RMB knockdown. Cannot be mistified.')}
   ${row('Prime_Autumnal_Blitz','Shift E','Prime: Autumnal Blitz',FG,'FG on start of skill, unprotected on hit. Can be mistified unlike Shift RMB.')}
   ${row('Absolute_Fogbloom','W RMB','Absolute: Fogbloom',UNP,'Fast. Applies evasion debuff.')}
@@ -447,12 +465,12 @@ document.getElementById('skill-card').innerHTML = `
 </div>`;
 
 // ============================================================
-// MOVEMENT DATA — same format as skills
+// MOVEMENT DATA - same format as skills
 // ============================================================
 document.getElementById('move-card').innerHTML = `
 <div class="skill-group" style="margin-top:0">
   ${row('Cloud_Step','Shift Space','Cloud Step',SA,'Main forward movement.')}
-  ${row('Absolute_Cloud_Shield','S F','Absolute: Cloud Shield',IF,'No stamina cost. Use for repositioning — regens stamina at start and end of skill.')}
+  ${row('Absolute_Cloud_Shield','S F','Absolute: Cloud Shield',IF,'No stamina cost. Use for repositioning - regens stamina at start and end of skill.')}
   ${row('Absolute_Deep_Haze','W F','Absolute: Deep Haze',SA_UNP,'+20 DP buff for 10 seconds. Use before trading.')}
   ${row('Flow_Oblique_Cleave','Space Bar','Flow: Oblique Cleave',SA,'No stamina cost. Low cooldown.')}
   ${row('Prime_Cloudspire','S RMB','Prime: Cloudspire',SA,'Moves you backwards while dealing filler damage. If you haven\'t used Virga Shaft yet, pressing LMB after is a great way to Re-CC quickly.')}
@@ -461,10 +479,10 @@ document.getElementById('move-card').innerHTML = `
   ${row('Moonlit_Haze','Shift Z','Moonlit Haze',IF_ONLY,'On-demand iframe. Disengage, dodge grabs, bait big skills.')}
   ${row('Flow_Velum_Slash','LMB (off CD)','Flow: Velum Slash',IF_ONLY,'Spammable. Extra distance after movement skills. Knockback while off CD. Unprotected on CD. Can burn stamina too quickly if you\'re not paying attention.')}
 </div>
-<div class="move-note"><strong>Stamina management:</strong> S F (Cloud Shield) costs zero stamina — use it constantly. Weave in F F and Spacebar between movements: F F regens stamina while keeping you in SA on a low cooldown, and Spacebar doesn't use stamina but helps you keep moving forward. Avoid spamming LMB (Velum Slash) just to move — drains stamina fast and goes unprotected on cooldown.</div>`;
+<div class="move-note"><strong>Stamina management:</strong> S F (Cloud Shield) costs zero stamina - use it constantly. Weave in F F and Spacebar between movements: F F regens stamina while keeping you in SA on a low cooldown, and Spacebar doesn't use stamina but helps you keep moving forward. Avoid spamming LMB (Velum Slash) just to move - drains stamina fast and goes unprotected on cooldown.</div>`;
 
 // ============================================================
-// TAB SWITCHING — no need to edit
+// TAB SWITCHING - no need to edit
 // ============================================================
 function showTab(id, btn) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
