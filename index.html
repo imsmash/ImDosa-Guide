@@ -194,9 +194,12 @@
   /* ============================================================
      FAQ
   ============================================================ */
-  .faq-item { margin-bottom: 1rem; }
-  .faq-q { font-size: 15px; font-weight: 600; margin-bottom: 0.4rem; color: var(--gold); }
-  .faq-a { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+  .faq-item { margin-bottom: 0; padding: 1rem 0; border-bottom: 1px solid var(--border); }
+  .faq-item:last-of-type { border-bottom: none; }
+  .faq-q { font-size: 15px; font-weight: 600; margin-bottom: 0.5rem; color: var(--gold); display: flex; align-items: flex-start; gap: 10px; }
+  .faq-badge { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: var(--radius-sm); background: #2e2710; color: var(--gold); border: 1px solid #5a4a18; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .faq-icon { width: 20px; height: 20px; border-radius: 4px; vertical-align: middle; margin: 0 2px; object-fit: cover; }
+  .faq-a { font-size: 14px; color: var(--text-muted); line-height: 1.7; padding-left: 32px; }
   .divider { height: 1px; background: var(--border); margin: 1rem 0; }
   .lock-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; padding: 8px 0; }
   .lock-row img { width: 36px; height: 36px; border-radius: 6px; object-fit: cover; }
@@ -343,24 +346,21 @@
   <div id="faq" class="section">
     <div class="card">
       <div class="faq-item">
-        <div class="faq-q">How do you teleport so far?</div>
-        <div class="faq-a">It's C (Cloud General) into RMB (Virga Shaft). Cloud General semi-randomly picks a target and will try to knock them back - there are some weird mechanics about it I won't get into. But there's a specific interaction where after using Cloud General, your Virga Shaft distance is greatly increased. If you do it correctly it can teleport you a massive distance, and yes - even vertically up terrain. There is a max distance and the terrain plays a huge role in how far you can go. Best advice I can offer is getting a friend and testing out how far you can go on different levels of terrain to get a feel for it yourself.</div>
+        <div class="faq-q"><span class="faq-badge">Q</span>How do you teleport so far?</div>
+        <div class="faq-a">It's <img class="faq-icon" src="icons/Prime_Cloud_General.webp"> C (Cloud General) into <img class="faq-icon" src="icons/Flow_Virga_Shaft.webp"> RMB (Virga Shaft). Cloud General semi-randomly picks a target and will try to knock them back - there are some weird mechanics about it I won't get into. But there's a specific interaction where after using Cloud General, your Virga Shaft distance is greatly increased. If you do it correctly it can teleport you a massive distance, and yes - even vertically up terrain. There is a max distance and the terrain plays a huge role in how far you can go. Best advice I can offer is getting a friend and testing out how far you can go on different levels of terrain to get a feel for it yourself.</div>
       </div>
-      <div class="divider"></div>
       <div class="faq-item">
-        <div class="faq-q">How do you manage your stamina?</div>
-        <div class="faq-a">S F (Cloud Shield) costs zero stamina - use it constantly. Weave in F F and Spacebar between movements: F F regens stamina while keeping you in SA on a low cooldown, and Spacebar doesn't use stamina but helps you keep moving forward. Avoid spamming LMB (Velum Slash) just to move - drains stamina fast and goes unprotected on cooldown.</div>
+        <div class="faq-q"><span class="faq-badge">Q</span>How do you manage your stamina?</div>
+        <div class="faq-a"><img class="faq-icon" src="icons/Absolute_Cloud_Shield.webp"> S F (Cloud Shield) costs zero stamina - use it constantly. Weave in <img class="faq-icon" src="icons/Prime_Flow_Blinding_Slash.webp"> F F and <img class="faq-icon" src="icons/Flow_Oblique_Cleave.webp"> Spacebar between movements: F F regens stamina while keeping you in SA on a low cooldown, and Spacebar doesn't use stamina but helps you keep moving forward. Avoid spamming <img class="faq-icon" src="icons/Flow_Velum_Slash.webp"> LMB (Velum Slash) just to move - drains stamina fast and goes unprotected on cooldown.</div>
       </div>
-      <div class="divider"></div>
       <div class="faq-item">
-        <div class="faq-q">I keep getting CC'd out of S F (Cloud Shield), help!</div>
-        <div class="faq-a">It's best to use S F after you use some other skill to break the distance or grant yourself some protection. For example, using A/D RMB (Flow: Cloud Drift), Shift A/D (Stratus Shift), or Shift Z (Moonlit Haze) before S F can help reduce the risk of getting hit accelerated out of S F and the move ending early. However, frame drops can still happen and cause it. Note this isn't a 100% guarantee it won't happen - it's just to mitigate it.</div>
+        <div class="faq-q"><span class="faq-badge">Q</span>I keep getting CC'd out of S F (Cloud Shield), help!</div>
+        <div class="faq-a">It's best to use <img class="faq-icon" src="icons/Absolute_Cloud_Shield.webp"> S F after you use some other skill to break the distance or grant yourself some protection. For example, using <img class="faq-icon" src="icons/Flow_Cloud_Drift.webp"> A/D RMB (Flow: Cloud Drift), <img class="faq-icon" src="icons/Stratus_Shift.webp"> Shift A/D (Stratus Shift), or <img class="faq-icon" src="icons/Moonlit_Haze.webp"> Shift Z (Moonlit Haze) before S F can help reduce the risk of getting hit accelerated out of S F and the move ending early. However, frame drops can still happen and cause it. Note this isn't a 100% guarantee it won't happen - it's just to mitigate it.</div>
       </div>
-      <div class="divider"></div>
       <div class="faq-item">
-        <div class="faq-q">What does Q (Prime: Wind Shear) do?</div>
-        <div class="faq-a">Prime: Wind Shear is enhanced by the skill enhancement Loop: Wind Shear. When you successfully block a skill with it, you heal 1000HP and enter SA with a 99% DR bonus. At the same time it knocks back nearby enemies - you can immediately follow up with RMB (Virga Shaft) to knock down any knocked back targets. The AoE on the knockback is pretty large so it can catch multiple people.</div>
-        <div class="faq-a" style="margin-top:0.6rem">The other thing worth knowing is that Q acts as a cancel for almost any animation. Mid-cast into Shift E? Press Q to cancel it. Stuck in the F F animation? Press Q to get out. It's one of the most useful tools on the kit for staying fluid and not getting caught in a bad animation.</div>
+        <div class="faq-q"><span class="faq-badge">Q</span>What does Q (Prime: Wind Shear) do?</div>
+        <div class="faq-a"><img class="faq-icon" src="icons/Loop_Wind_Shear.webp"> Prime: Wind Shear is enhanced by the skill enhancement Loop: Wind Shear. When you successfully block a skill with it, you heal 1000HP and enter SA with a 99% DR bonus. At the same time it knocks back nearby enemies - you can immediately follow up with <img class="faq-icon" src="icons/Flow_Virga_Shaft.webp"> RMB (Virga Shaft) to knock down any knocked back targets. The AoE on the knockback is pretty large so it can catch multiple people.</div>
+        <div class="faq-a" style="margin-top:0.6rem;padding-left:32px">The other thing worth knowing is that Q acts as a cancel for almost any animation. Mid-cast into <img class="faq-icon" src="icons/Prime_Autumnal_Blitz.webp"> Shift E? Press Q to cancel it. Stuck in the <img class="faq-icon" src="icons/Prime_Flow_Blinding_Slash.webp"> F F animation? Press Q to get out. It's one of the most useful tools on the kit for staying fluid and not getting caught in a bad animation.</div>
       </div>
     </div>
     <div style="font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:2rem;padding:0 0.25rem;">
